@@ -21,10 +21,10 @@ Uma **Binary Search Tree (BST)** é uma estrutura de dados em forma de árvore, 
 
 👥 Este projeto foi desenvolvido com os seguintes colaboradores:
 
-Jamilly Lima
-Anna Beatriz
-Alisson Vitor
-Denis
-Emmanuel
-Gui
+Jamilly Lima,
+Anna Beatriz,
+Alisson Vitor,
+Denis,
+Emmanuel,
+Gui e
 Matheus

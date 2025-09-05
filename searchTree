@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 // Função para criar um novo nó na árvore
 No* criarNo(int chave){
   No* novoNo = (No) malloc (sizeof(No);
@@ -59,6 +62,34 @@ No* remover(No* raiz, int chave) {
     }
     return raiz;
 }
+
+/* Função para percorrer em ordem (teste visual) */
+void emOrdem(No* raiz) {
+    if (raiz != NULL) {
+        emOrdem(raiz->esquerda);
+        printf("%d ", raiz->chave);
+        emOrdem(raiz->direita);
+    }
+}
+
+/*Função main, inserção e busca (testes práticos)*/
+int main() {
+    No* raiz = NULL;
+
+    // Inserções
+    raiz = inserir(raiz, 8);
+    inserir(raiz, 3);
+    inserir(raiz, 10);
+    inserir(raiz, 1);
+    inserir(raiz, 6);
+    inserir(raiz, 14);
+    inserir(raiz, 4);
+    inserir(raiz, 7);
+    inserir(raiz, 13);
+
+    printf("Árvore Binária de Busca criada (em ordem): ");
+    emOrdem(raiz);
+    printf("\n\n");
 
 // Testes de busca
 int valorParaBuscar = 6;

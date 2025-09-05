@@ -10,7 +10,7 @@ struct No *direita;      // Ponteiro para o filho da direita
 
 // Função para criar um novo nó na árvore
 No* criarNo(int chave){
-  No* novoNo = (No*) malloc (sizeof(No);
+  No* novoNo = (No*) malloc (sizeof(No));
   if(novoNo == NULL){
     printf("Erro ao fazer a alocacao de memoria!");
     exit(1);

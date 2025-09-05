@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Estrutura para representar um nó da arvore
+typedef struct No{
+int chave;               // O valor (chave) que o nó armazena
+struct No *esquerda;     // Ponteiro para o filho da esquerda
+struct No *direita;      // Ponteiro para o filho da direita
+} No;
+
 // Função para criar um novo nó na árvore
 No* criarNo(int chave){
   No* novoNo = (No) malloc (sizeof(No);
@@ -61,6 +68,15 @@ No* remover(No* raiz, int chave) {
         raiz->direita = remover(raiz->direita, temp->chave);
     }
     return raiz;
+}
+
+/* Função para percorrer em ordem (teste visual) */
+void emOrdem(No* raiz) {
+ if (raiz != NULL) {
+    emOrdem(raiz->esquerda);
+    printf("%d ", raiz->chave);
+    emOrdem(raiz->direita);
+    }
 }
 
 /* Função para percorrer em ordem (teste visual) */

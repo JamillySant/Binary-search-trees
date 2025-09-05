@@ -70,6 +70,32 @@ No* remover(No* raiz, int chave) {
     return raiz;
 }
 
+/**
+ * Função: buscar -- ALISSON VITOR PEREIRA BARBOSA
+ * ------------------------------------------------
+ * Busca recursivamente um nó com a chave especificada em uma árvore binária de busca.
+ *
+ * raiz: ponteiro para o nó raiz da árvore (ou subárvore)
+ * chave: valor a ser buscado
+ *
+ * Retorna: ponteiro para o nó que contém a chave, ou NULL se não for encontrado
+ */
+No* buscar(No* raiz, int chave) {
+    // Caso base: árvore vazia ou nó encontrado
+    if (raiz == NULL || raiz->chave == chave) {
+        return raiz;
+    }
+
+    // Se a chave procurada for menor, busca na subárvore esquerda
+    if (chave < raiz->chave) {
+        return buscar(raiz->esquerda, chave);
+    } 
+    // Se a chave procurada for maior, busca na subárvore direita
+    else {
+        return buscar(raiz->direita, chave);
+    }
+}
+
 /* Função para percorrer em ordem (teste visual) */
 void emOrdem(No* raiz) {
  if (raiz != NULL) {
@@ -124,3 +150,4 @@ printf("\n");
 
 return 0;
 }
+
